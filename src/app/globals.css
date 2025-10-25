@@ -1,6 +1,23 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 기본 색 */
+  --background: #FFFEFB;
+  --foreground: #1D1C1C;
+
+  /* 강조 색 */
+  --color-accent-100: #71C4EF;
+  --color-accent-200: #00668C;
+
+  /* 배경 보조 색 */
+  --color-bg-200: #F5F4F1;
+  --color-bg-300: #CCCBC8;
+
+  /* 주요 색 */
+  --color-primary-100: #D4EAF7;
+  --color-primary-200: #B6CCD8;
+  --color-primary-300: #3B3C3D;
+
+  /* 텍스트 보조 색 */
+  --color-text-200: #313D44;
 }
 
 @media (prefers-color-scheme: dark) {
