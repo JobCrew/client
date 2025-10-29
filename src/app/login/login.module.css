@@ -1,0 +1,102 @@
+.loginPage {
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    background: linear-gradient(to bottom, var(--color-primary-100), var(--color-primary-200));
+    width: 503px;
+    height: 516px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 58px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+}
+
+.logoBox {
+    background-color: var(--background);
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoBox p {
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.logoJob {
+    color: var(--color-accent-200);
+}
+
+.logoCrew {
+    color: var(--foreground);
+}
+
+.logo h1 {
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--foreground);
+}
+
+.socialLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loginBtn {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--foreground);
+    width: 353px;
+    height: 53px;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBtn:hover {
+    opacity: 0.9;
+}
+
+.google {
+    background-color: #ffffff;
+}
+
+.kakao {
+    background-color: #FEE500;
+}
+
+.naver {
+    background-color: #03C75A;
+}
