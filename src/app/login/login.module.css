@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .loginBtn:hover {
@@ -90,7 +91,7 @@
 }
 
 .google {
-    background-color: #ffffff;
+    background-color: #F2F2F2;
 }
 
 .kakao {
@@ -98,5 +99,6 @@
 }
 
 .naver {
+    color: #ffffff;
     background-color: #03C75A;
 }
