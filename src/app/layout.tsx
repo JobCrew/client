@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import Header from "@/app/components/header/header";
 
 const pretendard = localFont({
   src: [
@@ -53,6 +54,17 @@ const pretendard = localFont({
   variable: "--font-pretendard",
 });
 
+const montserrat = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Montserrat-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-montserrat",
+});
+
 export const metadata: Metadata = {
   title: "JobCrew",
   description:
@@ -66,7 +78,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.variable}`}>{children}</body>
+      <body className={`${pretendard.variable} ${montserrat.variable}`}>
+        <Header />
+        <main className="main-content">{children}</main>
+      </body>
     </html>
   );
 }

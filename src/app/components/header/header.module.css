@@ -1,0 +1,43 @@
+.header {
+    background-color: var(--background);
+    width: 100%;
+    position: sticky;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+}
+
+.logoJob {
+    color: var(--color-accent-200);
+}
+
+.logoCrew {
+    color: var(--foreground);
+}
+
+.nav {
+    display: flex;
+    gap: 51px;
+}
+
+.navLink {
+    color: var(--foreground);
+    font-size: 16px;
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+}
+
+.navLink:hover {
+    color: var(--color-accent-200);
+}
