@@ -1,0 +1,231 @@
+.signupPage {
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 54px;
+    overflow: hidden;
+}
+
+.box {
+    background: linear-gradient(to bottom, var(--color-primary-100), var(--color-primary-200));
+    width: 1031px;
+    height: 1102px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 42px;
+}
+
+.box h1 {
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--foreground);
+    align-self: flex-start;
+    margin-left: 60px;
+    margin-bottom: 96px;
+}
+
+.form {
+    width: 85%;
+    max-width: 931px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    width: 100%;
+}
+
+.inputItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputItem label {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--foreground);
+}
+
+.inputItem label span {
+    color: #BE2E22;
+}
+
+.inputItem input:not([type="radio"]),
+.inputItem select {
+    background-color: var(--background);
+    padding: 11px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 폼 요소 포커스 시 스타일 */
+.inputItem input:focus:not([type="radio"]),
+.inputItem select:focus {
+    outline: none;
+    border-color: var(--color-primary-200); /* 포커스 시 색상 변경 */
+    box-shadow: 0 0 0 1px var(--color-primary-200);
+}
+
+.radioGroup {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+/* 라디오 버튼 (숨기고 커스텀 스타일 적용) */
+.radioGroup input[type="radio"] {
+    display: none;
+}
+
+.radioGroup label {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--foreground);
+    position: relative;
+    padding-left: 20px; /* 커스텀 라디오 버튼 공간 */
+}
+
+/* 커스텀 라디오 버튼 모양 (기본 상태) */
+.radioGroup label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: var(--background);
+}
+
+/* 커스텀 라디오 버튼 모양 (선택 상태) */
+.radioGroup input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    width: 7px;
+    height: 7px;
+    background: var(--color-bg-300); /* 선택 표시 색상 */
+    border-radius: 50%;
+}
+
+/* 드롭다운 영역 */
+.selectWrapper {
+    position: relative; /* 커스텀 아이콘 배치를 위해 */
+    width: 100%;
+}
+
+.selectField {
+    width: 100%;
+    background-color: var(--background);
+    padding: 11px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    /* 브라우저 기본 화살표 숨기기 */
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+}
+
+.selectIcon {
+    position: absolute;
+    right: 11px; 
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 아이콘 클릭 방지 */
+    color: var(--color-bg-300);
+}
+
+/* 태그 영역 */
+.tagSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tagSection label {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--foreground);
+}
+
+.tagSection label span {
+    color: #BE2E22;
+}
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tagButton {
+    background-color: var(--color-bg-200);
+    color: var(--foreground);
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+    padding: 9px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    /* 선택되지 않은 기본 상태 */
+    opacity: 0.7; 
+    transition: opacity 0.2s;
+}
+
+.tagButton:hover {
+    opacity: 1;
+}
+
+/* 태그 선택시 */
+.tagButton.active {
+    opacity: 1;
+    font-weight: 600;
+    border: 1px solid var(--color-accent-200); 
+    background-color: var(--color-primary-100);
+   
+}
+
+.submitButton {
+    padding: 9px 50px;
+    background-color: var(--color-bg-200); 
+    color: var(--foreground);
+    border: 1px solid var(--color-bg-300);
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: var(--font-pretendard);
+    font-size: 15px;
+    font-weight: 600;
+    align-self: flex-end; 
+    margin-top: 50px;
+}

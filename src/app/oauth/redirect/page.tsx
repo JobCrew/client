@@ -23,7 +23,7 @@ export default function OAuthRedirect() {
         localStorage.setItem("provider", provider);
       }
       if (isProfileCompleted == "false") {
-        router.push("/join");
+        router.push("/signup");
       } else {
         router.push("/mypage");
       }

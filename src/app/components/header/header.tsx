@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const pathName = usePathname();
-  const isAuthPage = pathName === "/login" || pathName === "/join";
+  const isAuthPage = pathName === "/login" || pathName === "/signup";
   // 로그인 상태 관리
   const isLoggedIn = false;
 
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
               <Link href="/login" className={styles.navLink}>
                 로그인
               </Link>
-              <Link href="/join" className={styles.navLink}>
+              <Link href="/signup" className={styles.navLink}>
                 회원가입
               </Link>
             </>
